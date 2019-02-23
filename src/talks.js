@@ -36,18 +36,15 @@ async function run({ '--copy': shouldCopy }) {
     });
     const response = await prompt.run();
     if (response) {
-      console.log(response);
       const abstract = await getAbstract(response);
-      let wrapLength = windowSize.width - 5;
-      if (wrapLength > 80) {
-        wrapLength = 80;
-      }
       console.log(wrap('\n\n' + render(abstract)));
       if (shouldCopy) {
         clipboard.writeSync(abstract);
       }
     }
-  } catch {}
+  } catch (err) {
+    console.error(err);
+  }
 }
 
 module.exports = { run };
