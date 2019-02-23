@@ -1,12 +1,49 @@
 {
-  "name": "dkundel-cli",
+  "name": "dkundel",
   "version": "1.0.0",
-  "description": "",
+  "description": "My npm business card",
+  "bin": "./dist/index.js",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prepare": "npm run build",
+    "start": "ncc run src/index.js",
+    "build": "ncc build src/index.js -o dist -m"
   },
-  "keywords": [],
+  "keywords": [
+    "dkundel",
+    "npx",
+    "card",
+    "npm"
+  ],
   "author": "Dominik Kundel <dominik.kundel@gmail.com> (https://dkundel.com)",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dkundel/dkundel-cli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dkundel/dkundel-cli/issues"
+  },
+  "devDependencies": {
+    "@zeit/fetch": "^3.1.2",
+    "@zeit/ncc": "^0.15.2",
+    "about-json": "^1.0.2",
+    "arg": "^4.1.0",
+    "boxen": "^3.0.0",
+    "chalk": "^2.4.2",
+    "clipboardy": "^1.2.3",
+    "common-tags": "^1.8.0",
+    "enquirer": "^2.3.0",
+    "marked": "^0.6.1",
+    "marked-terminal": "^3.2.0",
+    "node-fetch": "^2.3.0",
+    "opn": "^5.4.0",
+    "window-size": "^1.1.1",
+    "wrap-ansi": "^4.0.0"
+  },
+  "files": [
+    "dist/",
+    "README.md",
+    "LICENSE"
+  ]
 }
