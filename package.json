@@ -1,6 +1,6 @@
 {
   "name": "dkundel",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "My npm business card",
   "bin": "./dist/index.js",
   "main": "index.js",
