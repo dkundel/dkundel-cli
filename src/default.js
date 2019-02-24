@@ -14,7 +14,7 @@ function run(options) {
         ${b('Work')}: Developer Evangelist at Twilio
     
      ${b('Twitter')}: https://twitter.com/${chalk.cyan('dkundel')}
-       ${b('Email')}: dkundel@twilio.com
+       ${b('Email')}: hi@dkundel.com
          ${b('npm')}: https://npm.im/${chalk.red('~dkundel')}
       ${b('GitHub')}: https://github.com/${chalk.underline('dkundel')}
     ${b('LinkedIn')}: https://linkedin.com/in/${chalk.cyan('dkundel')}
